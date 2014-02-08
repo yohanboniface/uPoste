@@ -1,6 +1,8 @@
 // Variables globales
-var TILES_URL = 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png';
-
+var TILES_URL = 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
+    POSTE = "postes",
+    BAL = "bal",
+    PARKING = "parking_pmr";
 /* ********************************************** */
 /*      Gestion de la page carte principale       */
 /* ********************************************** */
@@ -50,18 +52,18 @@ $(document).on('pageinit', '#pageCarte', function() {
     }
 
     // Methode pour afficher les points sur la carte
-    var maladesGroup = L.featureGroup().addTo(map);
-    function displayMalades (tx, rs) {
-        maladesGroup.clearLayers();
+    var closestGroup = L.featureGroup().addTo(map);
+    function displayPois (rows) {
+        closestGroup.clearLayers();
         var r, marker;
-        for(var i=0; i < rs.rows.length; i++) {
-            r = rs.rows.item(i);
+        for(var i=0; i < rows.length; i++) {
+            r = rows[i];
 
             // Ajouter une icone spécifique pour signaler les malades
             var icon = createIcon('images/malade.png');
-            marker = L.marker([r['lat'], r['lng']], {icon: icon});
-            marker.bindPopup(r['typeMaladie']);
-            maladesGroup.addLayer(marker);
+            marker = L.marker([r.lat, r.lng], {icon: icon});
+            // marker.bindPopup(r['typeMaladie']);
+            closestGroup.addLayer(marker);
         }
     }
 
@@ -136,8 +138,27 @@ $(document).on('pageinit', '#pageCarte', function() {
         }
     }
 
+    function displayClosest(type) {
+        db.transaction(function(tx) {
+          tx.executeSql('SELECT * FROM data WHERE type=?', [type], function (tx, rs) {
+                var rows = [];
+                for(var i=0; i < rs.rows.length; i++) {
+                    rows.push(rs.rows.item(i));
+                }
+                rows = Utils.closest(rows, map.getCenter());
+                displayPois(rows);
+          });
+        });
+    }
+
     $('#balButton').on('click', function () {
         toggleLayer(balGroup, 'data/bal.geojson', '#balButton', 'BaL');
+    });
+    $('#closestPosteButton').on('click', function () {
+        displayClosest(POSTE);
+    });
+    $('#closestBalButton').on('click', function () {
+        displayClosest(BAL);
     });
     $('#posteButton').on('click', function () {
         toggleLayer(posteGroup, 'data/postes.geojson', '#posteButton', 'Bureaux');
@@ -160,39 +181,54 @@ $(document).on('pageinit', '#pageCarte', function() {
 
         // On va chercher les cas de maladies en base pour les afficher
         // sur la carte
-        db.transaction(function(tx) {
-          tx.executeSql('SELECT * FROM Malades', [], displayMalades);
-        });
+        // db.transaction(function(tx) {
+        //   tx.executeSql('SELECT * FROM Malades', [], displayMalades);
+        // });
     });
 
 });
 
+var Utils = {
+    closest: function (rows, center) {
+        center = L.latLng(center);
+        return rows.sort(function (a, b) {
+            return center.distanceTo(L.latLng([a.lat, a.lng]))-center.distanceTo(L.latLng([b.lat, b.lng]));
+        }).slice(0, 10);
+    }
+};
 
 // Instancier la connexion avec la base de données
-var db = window.openDatabase("malade", "", "Malade", 1024*1000);
+var db = window.openDatabase("data", "", "Data", 1024*1000);
+
+function initData (type) {
+    db.transaction(function(tx) {
+        tx.executeSql('SELECT count(*) as total FROM data WHERE type=?', [type], function (tx, rs) {
+            var count = rs.rows.item(0);
+            if (count.total === 0) {
+                $.getJSON('data/' + type + '.geojson', function (data) {
+                    for (var i = 0; i < data.features.length; i++) {
+                        insertData(type, data.features[i]);
+                    }
+                });
+            }
+        });
+    });
+}
 
 // Initialization de la base de données
 $(document).ready(function() {
-  db.transaction(function(tx) {
-    tx.executeSql('CREATE TABLE IF NOT EXISTS Malades(id INTEGER PRIMARY KEY, typeMaladie TEXT, lat FLOAT, lng FLOAT)', []);
-  });
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS data(id INTEGER PRIMARY KEY, type STRING, properties TEXT, lat FLOAT, lng FLOAT)', []);
+    });
+    initData(POSTE);
+    initData(BAL);
 });
 
-// On récupère les données du formulaire et on appelle la méthode d'insertion
-function sendForm() {
-    var typeMaladie=$("#typeMaladie").val();
-    var lat = $("#formLat").val();
-    var lng = $("#formLng").val();
-    // Tester que les valeurs sont du bon type
-    if (typeMaladie !== "" && !isNaN(lat) && !isNaN(lng)) {
-        insertMalade(typeMaladie, lat, lng);
-    }
-}
-
 // Méthode pour insérer les données dans la base de données
-function insertMalade(typeMaladie, lat, lng) {
+function insertData(t, feature) {
+    console.log('insert')
     db.transaction(function(tx) {
-       tx.executeSql('INSERT INTO Malades (typeMaladie, lat, lng) VALUES ( ?, ?, ?)', [typeMaladie, lat, lng]);
+       tx.executeSql('INSERT INTO data (type, properties, lat, lng) VALUES (?, ?, ?, ?)', [t, JSON.stringify(feature.properties), feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
     });
 }
 
