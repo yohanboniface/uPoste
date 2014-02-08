@@ -2,7 +2,9 @@
 var TILES_URL = 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
     POSTE = "postes",
     BAL = "bal",
-    PARKING = "parking_pmr";
+    PARKING = "parking_pmr",
+    WHEELCHAIR = false,
+    DEAF = false;
 /* ********************************************** */
 /*      Gestion de la page carte principale       */
 /* ********************************************** */
@@ -248,7 +250,10 @@ function insertBalData(type, feature) {
        tx.executeSql('INSERT INTO bal (properties, lat, lng) VALUES (?, ?, ?)', [JSON.stringify(feature.properties), feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
     });
 }
-
+function updateParameters () {
+    WHEELCHAIR = !!$('#wheelchair').attr('checked');
+    DEAF = !!$('#deaf').attr('checked');
+}
 
 /* ********************************************** */
 /*  Gestion de la carte popup dans le formulaire  */
