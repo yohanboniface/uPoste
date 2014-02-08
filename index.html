@@ -22,7 +22,7 @@
             <div data-role="controlgroup">
                 <a data-role="button" data-icon="star" href="#pageCarte">Carte</a>
                 <a data-role="button" data-icon="star" id="poisButton">BaL la plus proche</a>
-                <a data-role="button" data-icon="star" id="boundaryButton">BaL active la plus proche</a>
+                <a data-role="button" data-icon="star" href="#listeBal">BaL active la plus proche</a>
                 <a data-role="button" data-icon="star" id="boundaryButton">Bureau le plus proche</a>
                 <a href="#notifyError" data-role="button" data-icon="star">Signaler une erreur</a>
                 <a href="#pageCarte" data-rel="close" data-role="button">Fermer</a>
@@ -52,8 +52,45 @@
         <div data-role="content">
             <div id="map"></div>
         </div>
+        <div data-role="navbar" data-position="fixed" data-tap-toggle="false" data-id="commonfooter" class="ui-state-persist">
+            <ul>
+                    <li><a href="#index" data-theme="a">Accueil</a></li>
+                    <li><a href="#pageCarte" data-theme="b">Carte</a></li>
+                    <li><a href="#listeBal" data-theme="a">Liste</a></li>
+            </ul>
+        </div>
     </div>
 
+       <div data-role="page" id="listeBal">
+
+        <div data-role="panel" id="mapPanel" data-theme="a" data-position="right">
+            <div data-role="controlgroup">
+                <a data-role="button" data-icon="star" id="locateButton">Ma position</a>
+                <a href="#pageCarte" data-rel="close" data-role="button">Fermer</a>
+            </div>
+        </div>
+
+        <div data-role="header" data-position="fixed">
+            <h1>Les points postaux autour de moi</h1>
+        </div>
+        
+       <div data-role="navbar" data-position="fixed" data-tap-toggle="false" data-id="commonfooter" class="ui-state-persist">
+            <ul>
+                    <li><a href="#index" data-theme="d">Accueil</a></li>
+                    <li><a href="#pageCarte" data-theme="d">Carte</a></li>
+                    <li><a href="#listeBal" data-theme="d">Liste</a></li>
+            </ul>
+        </div>
+       
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
     <div data-role="page" id="notifyError">
         <div data-role="header">
             <a data-transition="slide" data-direction="reverse" href="#pageCarte" data-role="button" data-icon="arrow-l">Annuler</a>
