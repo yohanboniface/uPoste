@@ -24,9 +24,9 @@
               
                for(var i=0; i < DATA.length; i++) {
                    r = DATA[i];
-                     $("#insertListPC").append('<li class="ui-li-static ui-body-inherit ui-first-child"><h3>'+r.name+'</h3> <p>'+r.address+'</p><p>Prochaine levée: <span id="list-next-rel">18h</span> <br />Horraires du jour: <span id="list-next-open">18h</span><br />Accessibilité :<span id="list-next-handi">'+r.wheelchair+'</span></p><p class="ui-li-aside"><strong>600</strong>m</p></li>');
+                     $("#insertListPC").append('<li class="ui-li-static ui-body-inherit"><p class="ui-li-aside"><strong>600</strong>m</p><h3 class="ui-li-heading">'+r.name+'</h3> <p class="ui-li-desc">'+r.address+'</p><p class="ui-li-desc">Prochaine levée: <span id="list-next-rel">18h</span> <br />Horaires du jour: <span id="list-next-open">18h</span><br />Accessibilité :<span id="list-next-handi">'+r.wheelchair+'</span></p></li>');
                  }
-                  
+                 
                
            });
    /*           $("#BalPlusProche").click(function () {
@@ -98,16 +98,7 @@
         <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-shadow" data-theme="d" id="insertListPC">
             
         </ul>
-       <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-shadow" data-theme="d">
-            <li class="ui-li-static ui-body-inherit ui-first-child">
-                    <h3>BAL 112 rue réaumur, 75002 Paris</h3>
-                    <p>Prochaine levée: <span id="list-next-rel">18h</span> <br />
-                    Horraires du jour: <span id="list-next-open">18h</span><br />
-                    Accessibilité :<span id="list-next-handi">Oui</span></p>
-                    <p class="ui-li-aside"><strong>600</strong>m</p>
-            </li>
-			
-        </ul>
+       
       <!--  <div class="bloc-list">
         <span id="list-type">BAL</span> <span id="list-location"> 112 rue réaumur, 75002 Paris</span><br />
         <span class="listlevee">&nbsp;</span><span id="list-next-rel">18h</span>
