@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2013-12-13T14:55:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/2154598097",
+      "properties": {
+        "@id": "node/2154598097",
+        "amenity": "drinking_water",
+        "operational_status": "open",
+        "operator": "CNAR",
+        "operator_type": "government",
+        "project:eurosha_2012": "yes",
+        "source": "GPS survey",
+        "source:date": "2013-02-14",
+        "status": "good",
+        "water_place_access": "community",
+        "water_place_durability": "durable",
+        "water_supply": "running_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0344976,
+          12.1237851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2154616412",
+      "properties": {
+        "@id": "node/2154616412",
+        "amenity": "drinking_water",
+        "operational_status": "open",
+        "operator_type": "private",
+        "project:eurosha_2012": "yes",
+        "source": "gps",
+        "source:date": "14/02/2013",
+        "status": "medium",
+        "water_place_access": "community",
+        "water_place_durability": "durable",
+        "water_purification": "aquatabs",
+        "water_supply": "unspecified"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0351922,
+          12.1233798
+        ]
+      }
+    }
+  ]
+}

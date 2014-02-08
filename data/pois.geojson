@@ -1,0 +1,1791 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2013-12-13T07:15:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/296137308",
+      "properties": {
+        "@id": "node/296137308",
+        "amenity": "school",
+        "name": "Markas-al-nour"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.057735,
+          12.132317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/482077564",
+      "properties": {
+        "@id": "node/482077564",
+        "name": "Novotel",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.02487,
+          12.1196328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/482079749",
+      "properties": {
+        "@id": "node/482079749",
+        "amenity": "embassy",
+        "country": "SA",
+        "name": "Embassy Saudi Arabia",
+        "name:en": "Embassy Saudi Arabia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0383471,
+          12.1294216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/482130342",
+      "properties": {
+        "@id": "node/482130342",
+        "amenity": "post_office"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0345856,
+          12.1147175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/482232664",
+      "properties": {
+        "@id": "node/482232664",
+        "amenity": "embassy",
+        "country": "CF",
+        "name": "Embassy of the Central African Republic",
+        "name:en": "Embassy of the Central African Republic",
+        "name:ru": "Посольство Центральноафриканской Республики"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.031042,
+          12.1235868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/482232666",
+      "properties": {
+        "@id": "node/482232666",
+        "name": "Meridien",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0311849,
+          12.1141744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/489722358",
+      "properties": {
+        "@id": "node/489722358",
+        "amenity": "bank",
+        "atm": "yes",
+        "name": "Orabank"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0357027,
+          12.1158906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/489722757",
+      "properties": {
+        "@id": "node/489722757",
+        "amenity": "public_building",
+        "name": "CSAPR"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0657953,
+          12.0981758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/489724266",
+      "properties": {
+        "@id": "node/489724266",
+        "amenity": "school",
+        "name": "Ecole Montaigne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0376608,
+          12.1194839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/489724599",
+      "properties": {
+        "@id": "node/489724599",
+        "amenity": "public_building",
+        "name": "CEFOD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0606299,
+          12.0992711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1392632002",
+      "properties": {
+        "@id": "node/1392632002",
+        "amenity": "swimming_pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.024772,
+          12.1191493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1397526668",
+      "properties": {
+        "@id": "node/1397526668",
+        "amenity": "embassy",
+        "name": "German Embassy",
+        "source": "Bing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0503016,
+          12.1009409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1397526669",
+      "properties": {
+        "@id": "node/1397526669",
+        "addr:street": "Avenue Bokassa",
+        "amenity": "doctors",
+        "name": "Centre medical",
+        "opening_hours": "8.00-16.00",
+        "project:ADIL-TCHAD_2012": "yes",
+        "source": "Bing",
+        "source:date": "23/10/2013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0553334,
+          12.1065824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1400899228",
+      "properties": {
+        "@id": "node/1400899228",
+        "amenity": "toilets"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.042558,
+          12.1057145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1400899304",
+      "properties": {
+        "@id": "node/1400899304",
+        "amenity": "townhall",
+        "name": "National Asembly"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0302306,
+          12.1243603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1401611617",
+      "properties": {
+        "@id": "node/1401611617",
+        "name": "Kempinski Hotel *****",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0777658,
+          12.1297333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1402680177",
+      "properties": {
+        "@id": "node/1402680177",
+        "amenity": "place_of_worship",
+        "name": "Eglise Baptiste mid Mission's Centrale",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0773766,
+          12.1058451
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1402688407",
+      "properties": {
+        "@id": "node/1402688407",
+        "amenity": "embassy",
+        "name": "US Embassy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0481727,
+          12.102142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1402688423",
+      "properties": {
+        "@id": "node/1402688423",
+        "amenity": "townhall",
+        "name": "Centre Culturel Francais"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.056096,
+          12.0993411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1991157527",
+      "properties": {
+        "@id": "node/1991157527",
+        "amenity": "residence toubouctou",
+        "project:eurosha_2012": "yes",
+        "source": "gps"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0880237,
+          12.1258936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1995137563",
+      "properties": {
+        "@id": "node/1995137563",
+        "shop": "kiosk",
+        "source": "Bing, GPS survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0533356,
+          12.097546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2081148833",
+      "properties": {
+        "@id": "node/2081148833",
+        "amenity": "townhall",
+        "name": "Mairie de la Ville"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0447305,
+          12.1053455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2137527986",
+      "properties": {
+        "@id": "node/2137527986",
+        "amenity": "place_of_worship",
+        "loc_name": "Masdjid Aboubakar",
+        "name": "Aboubakar",
+        "operational_status": "open",
+        "project:eurosha_2012": "yes",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0536258,
+          12.1269991
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2138797449",
+      "properties": {
+        "@id": "node/2138797449",
+        "amenity": "toilets",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0641905,
+          12.0998861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2138804932",
+      "properties": {
+        "@id": "node/2138804932",
+        "amenity": "place_of_worship",
+        "denomination": "others",
+        "name": "Entente des Eglises et Missions Evangeliques au Tchad",
+        "operational_status": "open",
+        "project:eurosha_2012": "yes",
+        "religion": "christian",
+        "short_name": "EEMET",
+        "source": "GPS",
+        "source:date": "2013-02-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0613063,
+          12.0920905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2139000057",
+      "properties": {
+        "@id": "node/2139000057",
+        "amenity": "school",
+        "name": "Etoiles brillantes",
+        "operational_status": "open",
+        "operator_type": "private",
+        "phone": "+23522518544",
+        "project:eurosha_2012": "yes",
+        "school:fondamental_first_cycle": "yes",
+        "source": "gps survey",
+        "source:date": "2013-02-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0607658,
+          12.0917045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2139000058",
+      "properties": {
+        "@id": "node/2139000058",
+        "amenity": "library",
+        "name": "bibliotheque",
+        "project:eurosha_2012": "yes",
+        "source": "gps survey",
+        "source:date": "2013-02-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0608633,
+          12.0917647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2139000119",
+      "properties": {
+        "@id": "node/2139000119",
+        "amenity": "toilets",
+        "disability_access": "unspecified",
+        "gender_access": "all",
+        "operational_status": "open",
+        "operator_type": "private",
+        "pitlatrine": "yes",
+        "project:eurosha_2012": "yes",
+        "source": "gps survey",
+        "source:date": "2013-02-02",
+        "status": "good",
+        "toilets_durability": "durable"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0607734,
+          12.0917982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2154598097",
+      "properties": {
+        "@id": "node/2154598097",
+        "amenity": "drinking_water",
+        "operational_status": "open",
+        "operator": "CNAR",
+        "operator_type": "government",
+        "project:eurosha_2012": "yes",
+        "source": "GPS survey",
+        "source:date": "2013-02-14",
+        "status": "good",
+        "water_place_access": "community",
+        "water_place_durability": "durable",
+        "water_supply": "running_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0344976,
+          12.1237851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2154616151",
+      "properties": {
+        "@id": "node/2154616151",
+        "access": "private",
+        "amenity": "parking",
+        "capacity:disabled": "no",
+        "capacity:women": "no",
+        "fee": "no",
+        "parking": "surface",
+        "project:eurosha_2012": "yes",
+        "source": "gps",
+        "source:date": "2013-02-14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0344669,
+          12.122946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2154616401",
+      "properties": {
+        "@id": "node/2154616401",
+        "amenity": "waste_basket",
+        "project:eurosha_2012": "yes",
+        "source": "gps",
+        "source:date": "14/02/2013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.035264,
+          12.1231685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2154616412",
+      "properties": {
+        "@id": "node/2154616412",
+        "amenity": "drinking_water",
+        "operational_status": "open",
+        "operator_type": "private",
+        "project:eurosha_2012": "yes",
+        "source": "gps",
+        "source:date": "14/02/2013",
+        "status": "medium",
+        "water_place_access": "community",
+        "water_place_durability": "durable",
+        "water_purification": "aquatabs",
+        "water_supply": "unspecified"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0351922,
+          12.1233798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2157128424",
+      "properties": {
+        "@id": "node/2157128424",
+        "project:eurosha_2012": "yes",
+        "shop": "variety_store",
+        "source": "bing",
+        "source:date": "2013-02-15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.057862,
+          12.0941059
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2157128478",
+      "properties": {
+        "@id": "node/2157128478",
+        "project:eurosha_2012": "yes",
+        "shop": "seafood",
+        "source": "bing",
+        "source:date": "2013-02-15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0574563,
+          12.0942577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2157128625",
+      "properties": {
+        "@id": "node/2157128625",
+        "name": "salon",
+        "project:eurosha_2012": "yes",
+        "shop": "hairdresser",
+        "source": "bing",
+        "source:date": "2013-02-15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0574796,
+          12.0945016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2157333238",
+      "properties": {
+        "@id": "node/2157333238",
+        "amenity": "hospital",
+        "project:eurosha_2012": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0562004,
+          12.1186977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801460",
+      "properties": {
+        "@id": "node/2163801460",
+        "amenity": "university",
+        "name": "HEC TCHAD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0899974,
+          12.1283023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801464",
+      "properties": {
+        "@id": "node/2163801464",
+        "amenity": "university",
+        "name": "HEC TCHAD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0888445,
+          12.129214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801468",
+      "properties": {
+        "@id": "node/2163801468",
+        "amenity": "university",
+        "name": "Institut ISTA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0541924,
+          12.1379293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801470",
+      "properties": {
+        "@id": "node/2163801470",
+        "amenity": "school",
+        "name": "Lycée Felix Eboué",
+        "operational_status": "open",
+        "operator_type": "government",
+        "project:eurosha_2012": "yes",
+        "school:fondamental_first_cycle": "no",
+        "school:fondamental_second_cycle": "yes",
+        "source": "bING"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0616547,
+          12.097292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801477",
+      "properties": {
+        "@id": "node/2163801477",
+        "amenity": "school",
+        "loc_name": "LTC",
+        "name": "Lycée Technique Commercial",
+        "operational_status": "open",
+        "operator_type": "government",
+        "project:eurosha_2012": "yes",
+        "school:fondamental_first_cycle": "no",
+        "school:fondamental_second_cycle": "yes",
+        "source": "bING"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0618377,
+          12.0956875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801484",
+      "properties": {
+        "@id": "node/2163801484",
+        "amenity": "school",
+        "name": "Lycée Thilam Thilam",
+        "operational_status": "open",
+        "operator_type": "private",
+        "project:eurosha_2012": "yes",
+        "school:fondamental_first_cycle": "yes",
+        "school:fondamental_second_cycle": "yes",
+        "school:fondamental_third_cycle": "yes",
+        "school:secondary": "yes",
+        "source": "bING"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0541433,
+          12.1385387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801491",
+      "properties": {
+        "@id": "node/2163801491",
+        "alt_name": "CEG",
+        "amenity": "school",
+        "name": "Lycée de la Paix",
+        "operational_status": "open",
+        "operator_type": "government",
+        "project:eurosha_2012": "yes",
+        "school:fondamental_first_cycle": "no",
+        "school:fondamental_second_cycle": "yes",
+        "source": "bING"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.042407,
+          12.1288282
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801513",
+      "properties": {
+        "@id": "node/2163801513",
+        "name": "Marché Modern",
+        "opening_hours": "Mo-Fr 08:30-20:00",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0400779,
+          12.1189157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801524",
+      "properties": {
+        "@id": "node/2163801524",
+        "name": "Musée National",
+        "opening_hours": "Mo-Fr 08:30-20:00",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0774352,
+          12.1254201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801528",
+      "properties": {
+        "@id": "node/2163801528",
+        "amenity": "courthouse",
+        "name": "Palais de Justice"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0743484,
+          12.1288284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163801531",
+      "properties": {
+        "@id": "node/2163801531",
+        "amenity": "studio",
+        "loc_name": "Radio Nationale Tchadien",
+        "name": "RNT",
+        "operational_status": "open",
+        "operator_type": "government",
+        "project:eurosha_2012": "yes",
+        "source": "bING",
+        "type": "audio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0584066,
+          12.095841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163827256",
+      "properties": {
+        "@id": "node/2163827256",
+        "addr:street": "rue Charle de Gaulle",
+        "amenity": "school",
+        "name": "Centre Al Mouna",
+        "operational_status": "open",
+        "operator_type": "community",
+        "project:eurosha_2012": "yes",
+        "school:fondamental_first_cycle": "yes",
+        "school:fondamental_second_cycle": "yes",
+        "school:fondamental_third_cycle": "yes",
+        "school:secondary": "yes",
+        "source": "bING"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.044038,
+          12.1094408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163827258",
+      "properties": {
+        "@id": "node/2163827258",
+        "addr:housenumber": "Hopitale Centrale",
+        "addr:street": "Rue Colonnel Moll",
+        "alt_name": "Centrale",
+        "amenity": "hospital",
+        "health_facility_type": "hospital",
+        "healthcare:cholera": "cholera_treatment_centre",
+        "healthcare_departments:general_medicine": "yes",
+        "healthcare_departments:medical_laboratory": "yes",
+        "healthcare_departments:operating_room": "yes",
+        "operational_status": "open",
+        "operator_type": "government",
+        "project:eurosha_2012": "yes",
+        "source": "bING"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0459302,
+          12.1047702
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163877019",
+      "properties": {
+        "@id": "node/2163877019",
+        "amenity": "bank",
+        "atm": "yes",
+        "name": "Banque BCC",
+        "opening_hours": "Mo-Fr 08:30-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.035983,
+          12.1165855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163877024",
+      "properties": {
+        "@id": "node/2163877024",
+        "amenity": "police",
+        "name": "Commissariat Central"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0338208,
+          12.1121894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163877037",
+      "properties": {
+        "@id": "node/2163877037",
+        "amenity": "embassy",
+        "name": "GABON EMBASSY"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0366551,
+          12.1167223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163877040",
+      "properties": {
+        "@id": "node/2163877040",
+        "amenity": "courthouse",
+        "name": "La Justice"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.036496,
+          12.1123766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163877044",
+      "properties": {
+        "@id": "node/2163877044",
+        "amenity": "car_wash",
+        "name": "Lavage de Voiture",
+        "opening_hours": "Mo-Fr 08:30-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0365868,
+          12.1141403
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163877057",
+      "properties": {
+        "@id": "node/2163877057",
+        "amenity": "embassy",
+        "name": "Ambassade de Russie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0336073,
+          12.1230883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163877061",
+      "properties": {
+        "@id": "node/2163877061",
+        "amenity": "restaurant",
+        "cuisine": "italian;chinese;pizza;burger;greek;german;indian;regional;kebab;turkish;asian;thai;mexican;japanese;french;sandwich;sushi",
+        "internet_access": "yes",
+        "microbrewery": "yes",
+        "name": "Restaurant Libanais LAYALINA",
+        "opening_hours": "24/7",
+        "smoking": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0323163,
+          12.1242857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163877067",
+      "properties": {
+        "@id": "node/2163877067",
+        "amenity": "bank",
+        "atm": "yes",
+        "name": "SGTB",
+        "opening_hours": "Mo-Fr 08:30-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0354235,
+          12.113598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2163877265",
+      "properties": {
+        "@id": "node/2163877265",
+        "amenity": "bank",
+        "opening_hours": "Mo-Fr 08:30-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0352345,
+          12.1138979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2164936411",
+      "properties": {
+        "@id": "node/2164936411",
+        "amenity": "embassy",
+        "name": "Ambassade du Cameroun"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.041436,
+          12.1179071
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2164936412",
+      "properties": {
+        "@id": "node/2164936412",
+        "addr:housenumber": "5",
+        "addr:street": "Avenue Pompidou",
+        "amenity": "school",
+        "name": "Ecole Bololo",
+        "operational_status": "open",
+        "operator_type": "government",
+        "project:eurosha_2012": "yes",
+        "school:fondamental_first_cycle": "yes",
+        "source": "bING"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0432382,
+          12.1144293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143917",
+      "properties": {
+        "@id": "node/2165143917",
+        "amenity": "bank",
+        "atm": "yes",
+        "name": "Banque BSIC",
+        "opening_hours": "Mo-Fr 08:30-20:00",
+        "operator": "Bisic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0349625,
+          12.1205477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143918",
+      "properties": {
+        "@id": "node/2165143918",
+        "amenity": "bank",
+        "atm": "yes",
+        "name": "Banque UBA",
+        "opening_hours": "Mo-Fr 08:30-20:00",
+        "operator": "UBA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0357724,
+          12.1153814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143919",
+      "properties": {
+        "@id": "node/2165143919",
+        "amenity": "cafe",
+        "cuisine": "ice_cream",
+        "internet_access": "wlan",
+        "internet_access:fee": "yes",
+        "name": "Caffé",
+        "opening_hours": "Mo-Fr 08:30-20:00",
+        "smoking": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0362099,
+          12.1189376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143920",
+      "properties": {
+        "@id": "node/2165143920",
+        "name": "Cyber Al Bata",
+        "opening_hours": "Mo-Fr 08:30-20:00",
+        "shop": "computer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0353748,
+          12.1171163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143921",
+      "properties": {
+        "@id": "node/2165143921",
+        "amenity": "bank",
+        "atm": "yes",
+        "name": "ECOBANK",
+        "opening_hours": "Mo-Fr 08:30-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0357479,
+          12.1172243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143922",
+      "properties": {
+        "@id": "node/2165143922",
+        "amenity": "bank",
+        "atm": "yes",
+        "name": "ECOBANK",
+        "opening_hours": "Mo-Fr 08:30-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0354387,
+          12.1184464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143923",
+      "properties": {
+        "@id": "node/2165143923",
+        "addr:street": "Avenue Avenue Nimery",
+        "amenity": "school",
+        "name": "Ecole Rue de 40m",
+        "operational_status": "open",
+        "operator_type": "government",
+        "project:eurosha_2012": "yes",
+        "school:fondamental_first_cycle": "yes",
+        "source": "bING"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0496906,
+          12.1278063
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143924",
+      "properties": {
+        "@id": "node/2165143924",
+        "amenity": "kindergarten",
+        "name": "Jardin d'enfants"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0407767,
+          12.1193479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143925",
+      "properties": {
+        "@id": "node/2165143925",
+        "amenity": "embassy",
+        "name": "Nigeria EMBASSY"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0349227,
+          12.12027
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143926",
+      "properties": {
+        "@id": "node/2165143926",
+        "amenity": "pharmacy",
+        "dispensing": "no",
+        "name": "Pharmacie du Beguinage",
+        "opening_hours": "Mo-Fr 08:30-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.036894,
+          12.1167131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143928",
+      "properties": {
+        "@id": "node/2165143928",
+        "addr:street": "Avenue Tombalbaye",
+        "amenity": "bar",
+        "internet_access": "wlan",
+        "internet_access:fee": "yes",
+        "name": "Restaurant Le CARNIVORE",
+        "opening_hours": "18h00",
+        "project:eurosha_2012": "yes",
+        "smoking": "yes",
+        "source": "bING",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0349652,
+          12.1208755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143929",
+      "properties": {
+        "@id": "node/2165143929",
+        "amenity": "fire_station",
+        "name": "Sapeur Pompier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0369186,
+          12.1164156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165143930",
+      "properties": {
+        "@id": "node/2165143930",
+        "name": "Alimentation Tchadienne",
+        "opening_hours": "Mo-Fr 08:30-20:00",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0353086,
+          12.118868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165144255",
+      "properties": {
+        "@id": "node/2165144255",
+        "amenity": "bank",
+        "atm": "yes",
+        "opening_hours": "Mo-Fr 08:30-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0354447,
+          12.1183089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2165144327",
+      "properties": {
+        "@id": "node/2165144327",
+        "opening_hours": "24/7",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0414615,
+          12.1194223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2180153205",
+      "properties": {
+        "@id": "node/2180153205",
+        "project:eurosha_2012": "yes",
+        "shop": "kiosk",
+        "source": "GPS",
+        "source:date": "2013-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0364968,
+          12.1205242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2180153219",
+      "properties": {
+        "@id": "node/2180153219",
+        "project:eurosha_2012": "yes",
+        "shop": "kiosk",
+        "source": "GPS",
+        "source:date": "2013-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0363839,
+          12.1205858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2187407189",
+      "properties": {
+        "@id": "node/2187407189",
+        "amenity": "library",
+        "name": "Bibliothèque Nationale",
+        "opening_hours": "Mo-Fr 08:30-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0769175,
+          12.1260043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2196288170",
+      "properties": {
+        "@id": "node/2196288170",
+        "name": "Hôtel Santana",
+        "source": "knowledge",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.1024993,
+          12.1024751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2199384559",
+      "properties": {
+        "@id": "node/2199384559",
+        "NOTE": "Cinquatenaire",
+        "amenity": "fountain",
+        "fountain": "Place de la Nation",
+        "operational_status": "open",
+        "operator_type": "unspecified",
+        "project:eurosha_2012": "yes",
+        "source": "bING",
+        "source:date": "13-03-2013",
+        "status": "good",
+        "water_supply": "unspecified"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0386666,
+          12.1116476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2199391951",
+      "properties": {
+        "@id": "node/2199391951",
+        "amenity": "place_of_worship",
+        "denomination": "sunni",
+        "name": "Mosquée",
+        "opening_hours": "24/7",
+        "religion": "muslim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0384693,
+          12.1136522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2199542163",
+      "properties": {
+        "@id": "node/2199542163",
+        "amenity": "school",
+        "name": "Ecole de Paris-congo",
+        "operational_status": "open",
+        "operator_type": "government",
+        "project:eurosha_2012": "yes",
+        "school:fondamental_first_cycle": "yes",
+        "school:fondamental_second_cycle": "no",
+        "source": "Bing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0701336,
+          12.103422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2225519141",
+      "properties": {
+        "@id": "node/2225519141",
+        "amenity": "toilets",
+        "disability_access": "yes",
+        "gender_access": "all",
+        "operational_status": "open",
+        "operator": "CNAR",
+        "operator_type": "government",
+        "project:ADIL-TCHAD_2012": "yes",
+        "source": "gps",
+        "source:date": "2013-03-26",
+        "status": "good",
+        "toilets_access": "community",
+        "toilets_durability": "durable",
+        "toilets_technology": "ventilated"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0344808,
+          12.1237754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2225519142",
+      "properties": {
+        "@id": "node/2225519142",
+        "amenity": "toilets",
+        "disability_access": "yes",
+        "gender_access": "all",
+        "operational_status": "open",
+        "operator": "CNAR",
+        "operator_type": "government",
+        "project:ADIL-TCHAD_2012": "yes",
+        "source": "gps",
+        "source:date": "2013-03-26",
+        "status": "good",
+        "toilets_access": "community",
+        "toilets_durability": "durable",
+        "toilets_technology": "ventilated"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0344852,
+          12.123783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2228882899",
+      "properties": {
+        "@id": "node/2228882899",
+        "addr:street": "Place de Nation",
+        "amenity": "arts_centre",
+        "name": "ADIL",
+        "operator": "HTCE",
+        "project:ADIL-TCHAD_2012": "yes",
+        "source": "bING"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0390555,
+          12.1099517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2370475608",
+      "properties": {
+        "@id": "node/2370475608",
+        "amenity": "fuel",
+        "building": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0495185,
+          12.1281519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2370475663",
+      "properties": {
+        "@id": "node/2370475663",
+        "name": "La Fontaine",
+        "shop": "stationery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.052288,
+          12.1010301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2500850601",
+      "properties": {
+        "@id": "node/2500850601",
+        "access": "private",
+        "amenity": "toilets",
+        "condition": "fair",
+        "disused": "yes",
+        "operator": "ISFOP",
+        "operator:type": "private",
+        "source": "GPS sourvey",
+        "toilets:type": "flush",
+        "unisex": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0632752,
+          12.0944718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2504760089",
+      "properties": {
+        "@id": "node/2504760089",
+        "amenity": "motorcycle_parking",
+        "capacity": "100",
+        "fee": "no",
+        "name": "Parking Rectorat",
+        "parking": "surface",
+        "project:ADIL-TCHAD_2012": "yes",
+        "source": "gps",
+        "source:date": "21/10/2013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0534943,
+          12.1002245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2504760093",
+      "properties": {
+        "@id": "node/2504760093",
+        "amenity": "waste_basket",
+        "source": "gps survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0535422,
+          12.0999579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2504764897",
+      "properties": {
+        "@id": "node/2504764897",
+        "amenity": "fountain",
+        "name": "Fontaine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0538198,
+          12.1000125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2506959190",
+      "properties": {
+        "@id": "node/2506959190",
+        "amenity": "motorcycle_parking",
+        "name": "parking moto rectorat",
+        "note": "non officiel",
+        "parking": "surface",
+        "source": "gps"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0538882,
+          12.1003812
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2507983222",
+      "properties": {
+        "@id": "node/2507983222",
+        "access": "private",
+        "amenity": "parking",
+        "capacity": "6",
+        "capacity:disabled": "no",
+        "capacity:parent": "unknown",
+        "capacity:women": "unknown",
+        "date": "23/10/2013",
+        "fee": "no",
+        "name": "Parking Rectorat",
+        "operator": "Rectorat Université N'Djamena",
+        "parking": "surface",
+        "source": "gps"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0543419,
+          12.1000441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2571239210",
+      "properties": {
+        "@id": "node/2571239210",
+        "amenity": "food_court",
+        "internet_access": "wlan",
+        "internet_access:fee": "yes",
+        "name": "Refectoire"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0560063,
+          12.1053902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2573196372",
+      "properties": {
+        "@id": "node/2573196372",
+        "name": "La Résidence",
+        "phone": "0023562567753",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0345883,
+          12.1248367
+        ]
+      }
+    }
+  ]
+}

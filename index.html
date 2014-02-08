@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name ="viewport" content="width=device-width, initial-scale=1" />
+    <title>uPoste</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.3.2.js"></script>
+    <link rel="stylesheet" type="text/css" href="leaflet/leaflet.css">
+    <script type="text/javascript" src="leaflet/leaflet-src.js"></script>
+    <script type="text/javascript" src="js/carte.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/carte.css">
+</head>
+<body>
+
+    <div data-role="page" id="index">
+        <div data-role="header">
+            <h1>uPoste</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="controlgroup">
+                <a data-role="button" data-icon="star" href="#pageCarte">Carte</a>
+                <a data-role="button" data-icon="star" id="poisButton">BaL la plus proche</a>
+                <a data-role="button" data-icon="star" id="boundaryButton">BaL active la plus proche</a>
+                <a data-role="button" data-icon="star" id="boundaryButton">Bureau le plus proche</a>
+                <a href="#notifyError" data-role="button" data-icon="star">Signaler une erreur</a>
+                <a href="#pageCarte" data-rel="close" data-role="button">Fermer</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="pageCarte">
+
+        <div data-role="panel" id="mapPanel" data-theme="a" data-position="right">
+            <div data-role="controlgroup">
+                <a data-role="button" data-icon="star" id="locateButton">Ma position</a>
+                <a href="#pageCarte" data-rel="close" data-role="button">Fermer</a>
+            </div>
+        </div>
+
+        <div data-role="header" data-position="fixed" data-fullscreen="true">
+            <h1>uPoste</h1>
+            <a href="#mapPanel" data-role="button" data-icon="bars" id="mapOptions" class="ui-btn-right">Options</a>
+        </div>
+        <div data-role="content">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div data-role="page" id="notifyError">
+        <div data-role="header">
+            <a data-transition="slide" data-direction="reverse" href="#pageCarte" data-role="button" data-icon="arrow-l">Annuler</a>
+            <h1>Signaler un cas de maladie</h1>
+        </div>
+        <div data-role="content">
+            <form action='.' method="post" id="placeForm" data-transition="flow" data-rel="dialog">
+                <input type="text" name="typeMaladie" id="typeMaladie" value="" required="required" placeholder="Type de maladie" />
+                
+                <input type="number" name="formLat" id="formLat" value="" required="required" placeholder="Latitude" />
+                
+                <input type="number" name="formLng" id="formLng" required="required" placeholder="Longitude" />
+                <a href="#mapFormPopup" data-role="button" data-rel="popup">Positionner sur la carte</a>
+                <button type="submit" onclick='sendForm()'>Envoyer</button>
+            </form>
+
+
+            <div data-role="popup" id="mapFormPopup">
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                <div data-role="header">
+                    <h3>Cliquer sur la carte</h3>
+                </div>
+                <div data-role="content">
+                    <div id="popupMapWrapper"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
