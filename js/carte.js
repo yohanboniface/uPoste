@@ -13,7 +13,7 @@ var TILES_URL = 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
 
 $(document).on('pageinit', '#pageCarte', function() {
     // On crée la carte
-    var map = L.map('map');
+    var map = L.map('map', {zoomControl: false});
 
     // On ajoute un fond de carte
     var tilelayer = L.tileLayer(TILES_URL, {
@@ -56,14 +56,13 @@ $(document).on('pageinit', '#pageCarte', function() {
 
     // Methode pour afficher les points sur la carte
     var closestGroup = L.featureGroup().addTo(map);
-    function displayPois () {
+    function displayPois (type) {
         closestGroup.clearLayers();
         var r, marker;
         for(var i=0; i < DATA.length; i++) {
             r = DATA[i];
 
-            // Ajouter une icone spécifique pour signaler les malades
-            var icon = createIcon('images/malade.png');
+            var icon = createIcon('images/' + type + '.png');
             marker = L.marker([r.lat, r.lng], {icon: icon});
             marker.bindPopup(r.name);
             closestGroup.addLayer(marker);
@@ -150,7 +149,7 @@ $(document).on('pageinit', '#pageCarte', function() {
                     rows.push(rs.rows.item(i));
                 }
                 DATA = Utils.closest(rows, map.getCenter());
-                displayPois();
+                displayPois(type);
           });
         });
     }
@@ -226,13 +225,12 @@ $(document).ready(function() {
         tx.executeSql('CREATE TABLE IF NOT EXISTS postes (id INTEGER PRIMARY KEY, properties TEXT, name STRING, address TEXT, wheelchair BOOLEAN, deaf BOOLEAN, lat FLOAT, lng FLOAT)', []);
     });
     db.transaction(function(tx) {
-        tx.executeSql('CREATE TABLE IF NOT EXISTS bal (id INTEGER PRIMARY KEY, properties TEXT, lat FLOAT, lng FLOAT)', []);
+        tx.executeSql('CREATE TABLE IF NOT EXISTS bal (id INTEGER PRIMARY KEY, properties TEXT, name STRING, address TEXT, wheelchair BOOLEAN, deaf BOOLEAN, lat FLOAT, lng FLOAT)', []);
     });
     initData(POSTE, insertPostesData);
     initData(BAL, insertBalData);
 });
 
-// Méthode pour insérer les données dans la base de données
 function insertPostesData(type, feature) {
     db.transaction(function(tx) {
         var data = [
@@ -247,11 +245,22 @@ function insertPostesData(type, feature) {
         tx.executeSql('INSERT INTO postes (properties, name, address, wheelchair, deaf, lat, lng) VALUES (?, ?, ?, ?, ?, ?, ?)', data);
     });
 }
+
 function insertBalData(type, feature) {
     db.transaction(function(tx) {
-       tx.executeSql('INSERT INTO bal (properties, lat, lng) VALUES (?, ?, ?)', [JSON.stringify(feature.properties), feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
+        var data = [
+            JSON.stringify(feature.properties),
+            "boîte aux lettres" + feature.properties.CO_EXT,
+            feature.properties.NUM_VOIE + " " + feature.properties.LB_VOIE,
+            !!feature.properties.Accessibilite_Entree_autonome_en_fauteuil_roulant_possible && !!feature.properties.Accessibilite_Absence_de_ressaut_de_plus_de_2_cm_de_haut,
+            !!feature.properties.Accessibilite_Borne_sonore_en_etat_de_fonctionnement,
+            feature.geometry.coordinates[1],
+            feature.geometry.coordinates[0]
+        ];
+        tx.executeSql('INSERT INTO bal (properties, name, address, wheelchair, deaf, lat, lng) VALUES (?, ?, ?, ?, ?, ?, ?)', data);
     });
 }
+
 function updateParameters () {
     WHEELCHAIR = !!$('#wheelchair').attr('checked');
     DEAF = !!$('#deaf').attr('checked');
