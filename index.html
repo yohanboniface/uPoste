@@ -41,6 +41,7 @@
                 <a data-role="button" data-icon="star" href="#listeBal">(liste)BaL active la plus proche</a>
                 <span data-role="button" data-icon="star" id="BalPlusProche" >Bureau le plus proche</span>
                 <a href="#notifyError" data-role="button" data-icon="star">Signaler une erreur</a>
+                <a href="#parameters" data-role="button" data-icon="star">Paramètres</a>
             </div>
         </div>
     </div>
@@ -56,11 +57,12 @@
                 <a data-role="button" data-icon="star" id="balButton">boîtes aux lettres</a>
                 <a data-role="button" data-icon="star" id="posteButton">bureaux</a>
                 <a data-role="button" data-icon="star" id="parkingButton">parkings</a>
+                <a href="#parameters" data-role="button" data-icon="star">Paramètres</a>
                 <a href="#pageCarte" data-rel="close" data-role="button">Fermer</a>
             </div>
         </div>
 
-        <div data-role="header" data-position="fixed" data-fullscreen="true">
+        <div data-role="header" data-position="fixed">
             <h1>uPoste</h1>
             <a href="#mapPanel" data-role="button" data-icon="bars" id="mapOptions" class="ui-btn-right">Options</a>
         </div>
@@ -213,14 +215,17 @@
     
     <div data-role="page" id="parameters">
         <div data-role="header">
-            <a data-transition="slide" data-direction="reverse" href="#pageCarte" data-role="button" data-icon="arrow-l">Annuler</a>
+            <a data-transition="slide" data-direction="reverse" href="#pageCarte" data-role="button" data-icon="arrow-l">Fermer</a>
             <h1>Paramètres</h1>
         </div>
         <div data-role="content">
             <form action='.' method="post" id="parameterForm" data-transition="flow" data-rel="dialog">
-                <input type="checkbox" name="wheelchair" id="wheelchair" />
-                <input type="checkbox" name="beaf" id="beaf" />
-                <button type="submit" onclick='updateParameters()'>Envoyer</button>
+            <label for"wheelchair">Accès en fauteuil roulant
+                <input type="checkbox" name="wheelchair" id="wheelchair" onclick='updateParameters()' />
+            </label>
+            <label for"deaf">Dispositifs audio
+                <input type="checkbox" name="deaf" id="deaf" onclick='updateParameters()' />
+            </label>
             </form>
 
 
