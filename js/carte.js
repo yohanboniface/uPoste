@@ -154,6 +154,7 @@ $(document).on('pageinit', '#pageCarte', function() {
                 }
                 DATA = Utils.closest(rows, map.getCenter());
                 displayPois(type);
+                $("#mapPanel").panel("close");
           });
         });
     }
