@@ -129,6 +129,7 @@ $(document).on('pageinit', '#pageCarte', function() {
                 // S'il n'en contient pas, alors on va chercher les 
                 // données sur le serveur
                 $.getJSON(path, function (data) {
+                    console.log(path, data.features.length)
                     group.addData(data);
                 });
             }
@@ -140,7 +141,8 @@ $(document).on('pageinit', '#pageCarte', function() {
 
     function displayClosest(type) {
         db.transaction(function(tx) {
-          tx.executeSql('SELECT * FROM data WHERE type=?', [type], function (tx, rs) {
+          tx.executeSql('SELECT * FROM ' + type, [], function (tx, rs) {
+            console.log('displayClosest')
                 var rows = [];
                 for(var i=0; i < rs.rows.length; i++) {
                     rows.push(rs.rows.item(i));
@@ -200,14 +202,15 @@ var Utils = {
 // Instancier la connexion avec la base de données
 var db = window.openDatabase("data", "", "Data", 1024*1000);
 
-function initData (type) {
+function initData (type, func) {
     db.transaction(function(tx) {
-        tx.executeSql('SELECT count(*) as total FROM data WHERE type=?', [type], function (tx, rs) {
+        tx.executeSql('SELECT count(*) as total FROM ' + type, [], function (tx, rs) {
             var count = rs.rows.item(0);
+            console.log(count)
             if (count.total === 0) {
                 $.getJSON('data/' + type + '.geojson', function (data) {
                     for (var i = 0; i < data.features.length; i++) {
-                        insertData(type, data.features[i]);
+                        func(type, data.features[i]);
                     }
                 });
             }
@@ -218,17 +221,31 @@ function initData (type) {
 // Initialization de la base de données
 $(document).ready(function() {
     db.transaction(function(tx) {
-        tx.executeSql('CREATE TABLE IF NOT EXISTS data(id INTEGER PRIMARY KEY, type STRING, properties TEXT, lat FLOAT, lng FLOAT)', []);
+        tx.executeSql('CREATE TABLE IF NOT EXISTS postes (id INTEGER PRIMARY KEY, properties TEXT, wheelchair BOOLEAN, deaf BOOLEAN, lat FLOAT, lng FLOAT)', []);
     });
-    initData(POSTE);
-    initData(BAL);
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS bal (id INTEGER PRIMARY KEY, properties TEXT, lat FLOAT, lng FLOAT)', []);
+    });
+    initData(POSTE, insertPostesData);
+    initData(BAL, insertBalData);
 });
 
 // Méthode pour insérer les données dans la base de données
-function insertData(t, feature) {
-    console.log('insert')
+function insertPostesData(type, feature) {
     db.transaction(function(tx) {
-       tx.executeSql('INSERT INTO data (type, properties, lat, lng) VALUES (?, ?, ?, ?)', [t, JSON.stringify(feature.properties), feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
+        var data = [
+            JSON.stringify(feature.properties),
+            !!feature.properties.Accessibilite_Entree_autonome_en_fauteuil_roulant_possible && !!feature.properties.Accessibilite_Absence_de_ressaut_de_plus_de_2_cm_de_haut,
+            !!feature.properties.Accessibilite_Borne_sonore_en_etat_de_fonctionnement,
+            feature.geometry.coordinates[1],
+            feature.geometry.coordinates[0]
+        ];
+        tx.executeSql('INSERT INTO postes (properties, wheelchair, deaf, lat, lng) VALUES (?, ?, ?, ?, ?)', data);
+    });
+}
+function insertBalData(type, feature) {
+    db.transaction(function(tx) {
+       tx.executeSql('INSERT INTO bal (properties, lat, lng) VALUES (?, ?, ?)', [JSON.stringify(feature.properties), feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
     });
 }
 
