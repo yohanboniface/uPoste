@@ -65,7 +65,7 @@ $(document).on('pageinit', '#pageCarte', function() {
             // Ajouter une icone spécifique pour signaler les malades
             var icon = createIcon('images/malade.png');
             marker = L.marker([r.lat, r.lng], {icon: icon});
-            // marker.bindPopup(r['typeMaladie']);
+            marker.bindPopup(r.name);
             closestGroup.addLayer(marker);
         }
     }
