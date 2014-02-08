@@ -64,7 +64,7 @@ $(document).on('pageinit', '#pageCarte', function() {
 
             var icon = createIcon('images/' + type + '.png');
             marker = L.marker([r.lat, r.lng], {icon: icon});
-            marker.bindPopup(r.name);
+            marker.bindPopup(r.name + "<br />" + r.address + "<br />Accès fauteuil: " + (r.wheelchair === "true" ? "Oui" : "Non"));
             closestGroup.addLayer(marker);
         }
     }
@@ -143,7 +143,11 @@ $(document).on('pageinit', '#pageCarte', function() {
 
     function displayClosest(type) {
         db.transaction(function(tx) {
-          tx.executeSql('SELECT * FROM ' + type, [], function (tx, rs) {
+            var sql = 'SELECT * FROM ' + type;
+            if (WHEELCHAIR) {
+                sql += " WHERE wheelchair='true'";
+            }
+            tx.executeSql(sql, [], function (tx, rs) {
                 var rows = [];
                 for(var i=0; i < rs.rows.length; i++) {
                     rows.push(rs.rows.item(i));
@@ -237,7 +241,7 @@ function insertPostesData(type, feature) {
             JSON.stringify(feature.properties),
             feature.properties.libelle,
             feature.properties.addr1,
-            !!feature.properties.Accessibilite_Entree_autonome_en_fauteuil_roulant_possible && !!feature.properties.Accessibilite_Absence_de_ressaut_de_plus_de_2_cm_de_haut,
+            feature.properties.Accessibilite_Entree_autonome_en_fauteuil_roulant_possible === "Oui" && feature.properties.Accessibilite_Absence_de_ressaut_de_plus_de_2_cm_de_haut === "Oui",
             !!feature.properties.Accessibilite_Borne_sonore_en_etat_de_fonctionnement,
             feature.geometry.coordinates[1],
             feature.geometry.coordinates[0]
@@ -250,10 +254,10 @@ function insertBalData(type, feature) {
     db.transaction(function(tx) {
         var data = [
             JSON.stringify(feature.properties),
-            "boîte aux lettres" + feature.properties.CO_EXT,
+            "boîte aux lettres " + feature.properties.CO_EXT,
             feature.properties.NUM_VOIE + " " + feature.properties.LB_VOIE,
             !!feature.properties.Accessibilite_Entree_autonome_en_fauteuil_roulant_possible && !!feature.properties.Accessibilite_Absence_de_ressaut_de_plus_de_2_cm_de_haut,
-            !!feature.properties.Accessibilite_Borne_sonore_en_etat_de_fonctionnement,
+            true,
             feature.geometry.coordinates[1],
             feature.geometry.coordinates[0]
         ];
