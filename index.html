@@ -120,6 +120,33 @@
 
         </div>
     </div>
+    
+    
+    <div data-role="page" id="parameters">
+        <div data-role="header">
+            <a data-transition="slide" data-direction="reverse" href="#pageCarte" data-role="button" data-icon="arrow-l">Annuler</a>
+            <h1>Paramètres</h1>
+        </div>
+        <div data-role="content">
+            <form action='.' method="post" id="parameterForm" data-transition="flow" data-rel="dialog">
+                <input type="checkbox" name="wheelchair" id="wheelchair" />
+                <input type="checkbox" name="beaf" id="beaf" />
+                <button type="submit" onclick='updateParameters()'>Envoyer</button>
+            </form>
+
+
+            <div data-role="popup" id="mapFormPopup">
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                <div data-role="header">
+                    <h3>Cliquer sur la carte</h3>
+                </div>
+                <div data-role="content">
+                    <div id="popupMapWrapper"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>
