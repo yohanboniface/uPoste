@@ -4,7 +4,8 @@ var TILES_URL = 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
     BAL = "bal",
     PARKING = "parking_pmr",
     WHEELCHAIR = false,
-    DEAF = false;
+    DEAF = false,
+    DATA;
 /* ********************************************** */
 /*      Gestion de la page carte principale       */
 /* ********************************************** */
@@ -55,11 +56,11 @@ $(document).on('pageinit', '#pageCarte', function() {
 
     // Methode pour afficher les points sur la carte
     var closestGroup = L.featureGroup().addTo(map);
-    function displayPois (rows) {
+    function displayPois () {
         closestGroup.clearLayers();
         var r, marker;
-        for(var i=0; i < rows.length; i++) {
-            r = rows[i];
+        for(var i=0; i < DATA.length; i++) {
+            r = DATA[i];
 
             // Ajouter une icone spécifique pour signaler les malades
             var icon = createIcon('images/malade.png');
@@ -149,8 +150,8 @@ $(document).on('pageinit', '#pageCarte', function() {
                 for(var i=0; i < rs.rows.length; i++) {
                     rows.push(rs.rows.item(i));
                 }
-                rows = Utils.closest(rows, map.getCenter());
-                displayPois(rows);
+                DATA = Utils.closest(rows, map.getCenter());
+                displayPois();
           });
         });
     }
