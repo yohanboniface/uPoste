@@ -145,7 +145,6 @@ $(document).on('pageinit', '#pageCarte', function() {
     function displayClosest(type) {
         db.transaction(function(tx) {
           tx.executeSql('SELECT * FROM ' + type, [], function (tx, rs) {
-            console.log('displayClosest')
                 var rows = [];
                 for(var i=0; i < rs.rows.length; i++) {
                     rows.push(rs.rows.item(i));
@@ -224,7 +223,7 @@ function initData (type, func) {
 // Initialization de la base de données
 $(document).ready(function() {
     db.transaction(function(tx) {
-        tx.executeSql('CREATE TABLE IF NOT EXISTS postes (id INTEGER PRIMARY KEY, properties TEXT, wheelchair BOOLEAN, deaf BOOLEAN, lat FLOAT, lng FLOAT)', []);
+        tx.executeSql('CREATE TABLE IF NOT EXISTS postes (id INTEGER PRIMARY KEY, properties TEXT, name STRING, address TEXT, wheelchair BOOLEAN, deaf BOOLEAN, lat FLOAT, lng FLOAT)', []);
     });
     db.transaction(function(tx) {
         tx.executeSql('CREATE TABLE IF NOT EXISTS bal (id INTEGER PRIMARY KEY, properties TEXT, lat FLOAT, lng FLOAT)', []);
@@ -238,12 +237,14 @@ function insertPostesData(type, feature) {
     db.transaction(function(tx) {
         var data = [
             JSON.stringify(feature.properties),
+            feature.properties.libelle,
+            feature.properties.addr1,
             !!feature.properties.Accessibilite_Entree_autonome_en_fauteuil_roulant_possible && !!feature.properties.Accessibilite_Absence_de_ressaut_de_plus_de_2_cm_de_haut,
             !!feature.properties.Accessibilite_Borne_sonore_en_etat_de_fonctionnement,
             feature.geometry.coordinates[1],
             feature.geometry.coordinates[0]
         ];
-        tx.executeSql('INSERT INTO postes (properties, wheelchair, deaf, lat, lng) VALUES (?, ?, ?, ?, ?)', data);
+        tx.executeSql('INSERT INTO postes (properties, name, address, wheelchair, deaf, lat, lng) VALUES (?, ?, ?, ?, ?, ?, ?)', data);
     });
 }
 function insertBalData(type, feature) {
