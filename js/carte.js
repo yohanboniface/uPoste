@@ -64,7 +64,7 @@ $(document).on('pageinit', '#pageCarte', function() {
 
             var icon = createIcon('images/' + type + '.png');
             marker = L.marker([r.lat, r.lng], {icon: icon});
-            marker.bindPopup(r.name + "<br />" + r.address + "<br />Accès fauteuil: " + (r.wheelchair === "true" ? "Oui" : "Non"));
+            marker.bindPopup(r.name + "<br />" + r.address + "<br />Accès fauteuil: " + (r.wheelchair === "true" ? "Oui" : "Non") + "<br />Distance: " + parseInt(r.distance, 10) + "m");
             closestGroup.addLayer(marker);
         }
     }
@@ -152,7 +152,15 @@ $(document).on('pageinit', '#pageCarte', function() {
                 for(var i=0; i < rs.rows.length; i++) {
                     rows.push(rs.rows.item(i));
                 }
-                DATA = Utils.closest(rows, map.getCenter());
+                var row,
+                    center = map.getCenter();
+                rows = Utils.closest(rows, center);
+                DATA = [];
+                for (var j = 0; j < rows.length; j++) {
+                    row = rows[j];
+                    row.distance = center.distanceTo(L.latLng([row.lat, row.lng]));
+                    DATA.push(row);
+                }
                 displayPois(type);
                 $("#mapPanel").panel("close");
           });
