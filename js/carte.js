@@ -135,16 +135,16 @@ $(document).on('pageinit', '#pageCarte', function() {
         }
     }
 
-    // On ajoute un écouteur sur le bouton pour afficher les POIs
-    $('#poisButton').on('click', function () {
-        toggleLayer(poisGroup, 'data/pois.geojson', '#poisButton', 'POIs');
+    $('#balButton').on('click', function () {
+        toggleLayer(poisGroup, 'data/bal.geojson', '#balButton', 'BaL');
+    });
+    $('#posteButton').on('click', function () {
+        toggleLayer(poisGroup, 'data/postes.geojson', '#posteButton', 'Bureaux');
+    });
+    $('#parkingButton').on('click', function () {
+        toggleLayer(poisGroup, 'data/parking_pmr.geojson', '#parkingButton', 'Parkings');
     });
 
-    // On ajoute un écouteur sur le bouton pour afficher les limites
-    // administratives
-    $('#boundaryButton').on('click', function () {
-        toggleLayer(boundaryGroup, 'data/boundary.geojson', '#boundaryButton', 'régions');
-    });
 
     // Mise à jour des dimensions de la carte au chargement de la page
     $(document).on('pageshow', '#pageCarte', function() {
