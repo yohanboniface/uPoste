@@ -110,8 +110,9 @@ $(document).on('pageinit', '#pageCarte', function() {
     // On crée les deux groupes de données (layers), mais sans aucune
     // donnée pour l'instant (les données seront ajoutées lors du 
     // premier clic)
-    var poisGroup = L.geoJson(null, options);
-    var boundaryGroup = L.geoJson(null, options);
+    var balGroup = L.geoJson(null, options);
+    var posteGroup = L.geoJson(null, options);
+    var parkingGroup = L.geoJson(null, options);
 
 
     function toggleLayer(group, path, buttonId, name) {
@@ -136,13 +137,13 @@ $(document).on('pageinit', '#pageCarte', function() {
     }
 
     $('#balButton').on('click', function () {
-        toggleLayer(poisGroup, 'data/bal.geojson', '#balButton', 'BaL');
+        toggleLayer(balGroup, 'data/bal.geojson', '#balButton', 'BaL');
     });
     $('#posteButton').on('click', function () {
-        toggleLayer(poisGroup, 'data/postes.geojson', '#posteButton', 'Bureaux');
+        toggleLayer(posteGroup, 'data/postes.geojson', '#posteButton', 'Bureaux');
     });
     $('#parkingButton').on('click', function () {
-        toggleLayer(poisGroup, 'data/parking_pmr.geojson', '#parkingButton', 'Parkings');
+        toggleLayer(parkingGroup, 'data/parking_pmr.geojson', '#parkingButton', 'Parkings');
     });
 
 
