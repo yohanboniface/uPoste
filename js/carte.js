@@ -43,6 +43,7 @@ $(document).on('pageinit', '#pageCarte', function() {
     // Géolocalisation au click sur le bouton locateButton
     $('#locateButton').on('click', function () {
         map.locate({setView: true, maxZoom: 18, timeout: 10000});
+        $("#mapPanel").panel("close");
     });
 
     // Méthode pour créer une icone
