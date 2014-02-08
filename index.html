@@ -11,10 +11,26 @@
     <script type="text/javascript" src="leaflet/leaflet-src.js"></script>
     <script type="text/javascript" src="js/carte.js"></script>
     <link rel="stylesheet" type="text/css" href="css/carte.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 <body>
 
     <div data-role="page" id="index">
+        <script type="text/javascript">
+   /*         $( document ).ready(function() {
+              $("#BalPlusProche").click(function () {
+  $.mobile.changePage("#listeBal", {
+        transition: "slide",
+        reverse: true,
+        data: { "type":"proche" }
+    });
+  
+  $.mobile.changePage("#listeBal?type=proche");
+    //  $.mobile.pageContainer("change", "#listeBal");
+//eg: $.mobile.changePage("mypage.html", { data: { "param1": "value1" } });
+});
+});*/
+        </script>
         <div data-role="header">
             <h1>uPoste</h1>
         </div>
@@ -22,10 +38,9 @@
             <div data-role="controlgroup">
                 <a data-role="button" data-icon="star" href="#pageCarte">Carte</a>
                 <a data-role="button" data-icon="star" id="poisButton">BaL la plus proche</a>
-                <a data-role="button" data-icon="star" href="#listeBal">BaL active la plus proche</a>
-                <a data-role="button" data-icon="star" id="boundaryButton">Bureau le plus proche</a>
+                <a data-role="button" data-icon="star" href="#listeBal">(liste)BaL active la plus proche</a>
+                <span data-role="button" data-icon="star" id="BalPlusProche" >Bureau le plus proche</span>
                 <a href="#notifyError" data-role="button" data-icon="star">Signaler une erreur</a>
-                <a href="#pageCarte" data-rel="close" data-role="button">Fermer</a>
             </div>
         </div>
     </div>
@@ -59,7 +74,7 @@
         </div>
     </div>
 
-       <div data-role="page" id="listeBal">
+   <div data-role="page" id="listeBal">
 
         <div data-role="panel" id="mapPanel" data-theme="a" data-position="right">
             <div data-role="controlgroup">
@@ -71,12 +86,86 @@
         <div data-role="header" data-position="fixed">
             <h1>Les points postaux autour de moi</h1>
         </div>
+
+       <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-shadow" data-theme="d">
+            <li class="ui-li-static ui-body-inherit ui-first-child">
+                    <h3>BAL 112 rue réaumur, 75002 Paris</h3>
+                    <p>Prochaine levée: <span id="list-next-rel">18h</span> <br />
+                    Horraires du jour: <span id="list-next-open">18h</span><br />
+                    Accessibilité :<span id="list-next-handi">Oui</span></p>
+                    <p class="ui-li-aside"><strong>600</strong>m</p>
+            </li>
+            <li class="ui-li-static ui-body-inherit ui-first-child">
+                    <h3>BAL 112 rue réaumur, 75002 Paris</h3>
+                    <p>Prochaine levée: <span id="list-next-rel">18h</span> <br />
+                    Horraires du jour: <span id="list-next-open">18h</span><br />
+                    Accessibilité :<span id="list-next-handi">Oui</span></p>
+                    <p class="ui-li-aside"><strong>600</strong>m</p>
+            </li>
+            <li class="ui-li-static ui-body-inherit ui-first-child">
+                    <h3>BAL 112 rue réaumur, 75002 Paris</h3>
+                    <p>Prochaine levée: <span id="list-next-rel">18h</span> <br />
+                    Horraires du jour: <span id="list-next-open">18h</span><br />
+                    Accessibilité :<span id="list-next-handi">Oui</span></p>
+                    <p class="ui-li-aside"><strong>600</strong>m</p>
+            </li>
+            <li class="ui-li-static ui-body-inherit ui-first-child">
+                    <h3>BAL 112 rue réaumur, 75002 Paris</h3>
+                    <p>Prochaine levée: <span id="list-next-rel">18h</span> <br />
+                    Horraires du jour: <span id="list-next-open">18h</span><br />
+                    Accessibilité :<span id="list-next-handi">Oui</span></p>
+                    <p class="ui-li-aside"><strong>600</strong>m</p>
+            </li>
+			
+        </ul>
+      <!--  <div class="bloc-list">
+        <span id="list-type">BAL</span> <span id="list-location"> 112 rue réaumur, 75002 Paris</span><br />
+        <span class="listlevee">&nbsp;</span><span id="list-next-rel">18h</span>
+        <span class="listlevee">&nbsp;</span> <span id="list-next-open">18h</span><br />
+               Accessibilité :<span id="list-next-handi">Oui</span>
+       </div>
+       <div class="bloc-list">
+        <span id="list-type">BAL</span> <span id="list-location"> 112 rue réaumur, 75002 Paris</span><br />
+               Prochaine levée: <span id="list-next-rel">18h</span> <br />
+               Horraires du jour: <span id="list-next-open">18h</span><br />
+               Accessibilité :<span id="list-next-handi">Oui</span>
+       </div>
+       
+       </div>-->
+       
+       <div data-role="navbar" data-position="fixed" data-tap-toggle="false" data-id="commonfooter" class="ui-state-persist">
+            <ul>
+                    <li><a href="#index" data-theme="a">Accueil</a></li>
+                    <li><a href="#pageCarte" data-theme="a">Carte</a></li>
+                    <li><a href="#listeBal" data-theme="b">Liste</a></li>
+            </ul>
+        </div>
+       
+    </div>
+    
+    <div data-role="page" id="BalPlusProche">
+
+          <script type="text/javascript">
+    $("#BalPlusProche").on("pageshow", onPageShow);
+    function onPageShow(e,data)
+    {
+        var url = $.url(document.location);
+
+        var param1 = url.param("type");
+        alert("coucou "+param1);
+    }
+  </script>
+        
+
+        <div data-role="header" data-position="fixed">
+            <h1>BalPlusProche</h1>
+        </div>
         
        <div data-role="navbar" data-position="fixed" data-tap-toggle="false" data-id="commonfooter" class="ui-state-persist">
             <ul>
-                    <li><a href="#index" data-theme="d">Accueil</a></li>
-                    <li><a href="#pageCarte" data-theme="d">Carte</a></li>
-                    <li><a href="#listeBal" data-theme="d">Liste</a></li>
+                    <li><a href="#index" data-theme="a">Accueil</a></li>
+                    <li><a href="#pageCarte" data-theme="a">Carte</a></li>
+                    <li><a href="#listeBal" data-theme="B">Liste</a></li>
             </ul>
         </div>
        
